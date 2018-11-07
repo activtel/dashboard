@@ -1,0 +1,78 @@
+:root {
+  --borderWidth: 2px;
+  --labelSize: calc(4 * var(--borderWidth));
+}
+
+.balloon-position {
+  padding-bottom:0.8rem;
+}
+
+.balloon-container, .balloon-container:after, .balloon-container div:first-child, .balloon-container div:last-child {
+  position: absolute;
+  border: var(--borderWidth) solid #fff;
+  box-sizing: border-box;
+}
+
+.balloon-container {
+  border-bottom: none;
+  width: 12rem;
+  height: 4rem;
+  padding-top: 1rem;
+  position: relative;
+  border-radius: 0.3rem;
+}
+
+.balloon-container:after {
+  content: '';
+  display: block;
+  left: 43.5%;
+  bottom: -20%;
+  border-right: none;
+  border-top: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  transform: rotate(-45deg);
+}
+
+.balloon-container div:first-child, .balloon-container div:last-child {
+  bottom: 0;
+  border: none;
+  border-bottom: var(--borderWidth) solid #fff;
+  width: calc((100% - 3.99*var(--labelSize))/2);
+}
+
+.balloon-container div:first-child {
+  left: 0;
+}
+
+.balloon-container div:last-child {
+  right: 0;
+}
+
+.balloon-position .star, footer .anker {
+  position: relative;
+}
+
+.balloon-position .star::after {
+  content: url("star.svg");
+  transform: scale(.7);
+  position: absolute;
+  top: -1.5rem;
+  left: -1.5rem;
+}
+
+.balloon-position .anker::after {
+  content: url("anker.svg");
+  transform: scale(.7);
+  position: absolute;
+  top: -1.5rem;
+  left: -1.5rem;
+}
+
+[class*="ymaps-2"][class*="-ground-pane"] {
+  filter: brightness(0.3) grayscale(100%);
+  -webkit-filter: brightness(0.3) grayscale(100%);
+  -moz-filter: brightness(0.3);
+  -o-filter: brightness(0.3);
+  -ms-filter: brightness(0.3);
+}

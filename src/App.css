@@ -1,0 +1,130 @@
+.col-sm {
+  min-height: 100vh;
+}
+
+.flex-fixed-width-item {
+  background: #fff;
+}
+
+.col-map {
+  background: grey;
+}
+
+.card-header {
+  background: #fff;
+  border: none;
+  padding: 1.1rem 2.4rem;
+}
+
+.card-body {
+  padding: 0;
+  padding-top: 0.4rem;
+}
+
+.card-body a {
+  padding-top: 0.25rem;
+  padding-bottom: 0.24rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14rem;
+  padding-left: 3.5rem;
+  color: #000;
+  letter-spacing: 0.16rem;
+}
+
+.card-body a.active {
+  font-weight: bold;
+}
+
+.card-body a:hover {
+  font-weight: bold;
+  color: #00e0a9;
+}
+
+.logo {
+  transform: scale(.8);
+}
+
+.active {
+  background: #fff;
+  position: relative;
+  font-weight: bold;
+}
+
+footer {
+  padding-left: 2.5rem !important;
+  font-size: 0.8rem;
+  padding-left: 1rem;
+  line-height: 1.1rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer ul a {
+  color: #000;
+}
+
+footer ul a:hover {
+  color: #000;
+  font-weight: bold;
+}
+
+.footer {
+  margin-top: 2.5rem;
+}
+
+.footer a {
+  color: #0040ff;
+}
+
+footer .star, footer .anker {
+  position: relative;
+}
+
+footer .star::after {
+  content: url("star.svg");
+  transform: scale(.7);
+  position: absolute;
+  left: -2rem;
+  top: 0rem;
+}
+
+footer .anker::after {
+  content: url("anker.svg");
+  transform: scale(.7);
+  position: absolute;
+  left: -2rem;
+  top: 0rem;
+}
+
+@media (min-width: 576px) {
+  .flex-fixed-width-item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 28.8%;
+    flex: 0 0 28.8%;
+    max-width: 28.8%;
+  }
+  .col-sm {
+    min-height: 100vh;
+  }
+  .flex-fixed-width-item>div {
+    min-height: 100vh;
+  }
+  .active::after {
+    content: '';
+    position: absolute;
+    left: -9%;
+    top: 6px;
+    border: 18px solid transparent;
+    border-right: 18px solid #fff;
+  }
+  footer .active::after {
+    content: '';
+    position: absolute;
+    left: -18%;
+    top: 0px;
+    border: 18px solid transparent;
+    border-right: 18px solid #fff;
+  }
+}
